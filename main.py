@@ -88,7 +88,10 @@ while playing:
     check_player_collisions()
     check_out_of_bounds()
     check_enemy_collisions()
-
+    
+    if scoreboard.lives == 0:
+        scoreboard.game_over()
+        playing = False
 
 
 screen.exitonclick()
