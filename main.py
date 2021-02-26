@@ -64,6 +64,14 @@ def check_enemy_collisions():
             if enemies.enemy_bullet.distance(brick) < 20:
                 barriers.destroy(brick)
                 enemies.destroy_enemy_bullet()
+                
+
+def check_win():
+    if enemies.enemy_list:
+        return False
+    else:
+        scoreboard.win()
+        return True
 
 
 screen.listen()
@@ -78,6 +86,7 @@ while playing:
     time.sleep(.2)
     enemies.move()
     enemies.enemy_shoot()
+    check_win()
 
     if turret.bullet:
         turret.player_bullet_move()
@@ -88,6 +97,9 @@ while playing:
     check_player_collisions()
     check_out_of_bounds()
     check_enemy_collisions()
+    
+    if check_win():
+        playing=False
     
     if scoreboard.lives == 0:
         scoreboard.game_over()
