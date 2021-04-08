@@ -8,6 +8,7 @@ class Enemies(Turtle):
         self.make_enemies()
         self.moving_right = True
         self.enemy_bullet = None
+        self.move_speed = 0.1
 
     def make_enemies(self):
         x, y = -250, 250
