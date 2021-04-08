@@ -83,7 +83,7 @@ playing = True
 
 while playing:
     screen.update()
-    time.sleep(.2)
+    time.sleep(enemies.move_speed)
     enemies.move()
     enemies.enemy_shoot()
     check_win()
