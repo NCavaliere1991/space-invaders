@@ -1,2 +1,2 @@
 # space-invaders
-Space Invaders clone with Turtle.
+Space Invaders clone built with the Turtle module.
