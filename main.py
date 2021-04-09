@@ -57,6 +57,7 @@ def check_enemy_collisions():
         if enemies.enemy_bullet.distance(turret) < 20:
             enemies.destroy_enemy_bullet()
             turret.reset_position()
+            enemies.move_speed = 0.1
             scoreboard.lose_life()
 
     for brick in barriers.barrier_list:
